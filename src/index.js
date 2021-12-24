@@ -1,3 +1,5 @@
+import "core-js";
+import "regenerator-runtime/runtime";
 // 箭头函数
 const fn = () => {
   console.log("czq");
