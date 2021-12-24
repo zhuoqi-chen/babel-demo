@@ -13,6 +13,8 @@ const p = new Promise((resolve, reject) => {
 // array map
 const list = [1, 2, 3, 4].map((item) => item * 2);
 
+// array entries
+const list2 = Object.entries({ a: 1 });
 // es6 class
 class Person {
   constructor(name) {
@@ -22,3 +24,9 @@ class Person {
     console.log(this.name);
   }
 }
+
+const obj = {
+  a: { b: 1 },
+};
+
+const c = obj.a?.b?.c;
