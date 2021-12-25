@@ -1,22 +1,20 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.object.entries.js");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
 require("core-js/modules/es.function.name.js");
 
-var _obj$a, _obj$a$b;
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createClass"));
+
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
+
+var _map = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/map"));
+
+var _entries = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/entries"));
+
+var _context, _obj$a, _obj$a$b;
 
 // import "core-js";
 // import "regenerator-runtime/runtime";
@@ -26,17 +24,17 @@ var fn = function fn() {
 }; // promise
 
 
-var p = new Promise(function (resolve, reject) {
+var p = new _promise.default(function (resolve, reject) {
   setTimeout(function () {
     resolve("czq");
   }, 0);
 }); // array map
 
-var list = [1, 2, 3, 4].map(function (item) {
+var list = (0, _map.default)(_context = [1, 2, 3, 4]).call(_context, function (item) {
   return item * 2;
 }); // array entries
 
-var list2 = Object.entries({
+var list2 = (0, _entries.default)({
   a: 1
 }); // es6 class
 
