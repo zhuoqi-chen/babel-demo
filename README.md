@@ -52,3 +52,10 @@ module.exports = {
   ],
 };
 ```
+
+## @babel/plugin-transform-runtime
+
+class 语法中，babel 自定义了 \_classCallCheck 这个函数来辅助；
+这些函数叫做 helpers
+没有装@babel/plugin-transform-runtime 插件之前,都是在编译后的文件中定义 helpers
+装了后 helpers,helpers 从之前的原地定义改为了从一个统一的模块中引入，使得打包的结果中每个 helper 只会存在一个
